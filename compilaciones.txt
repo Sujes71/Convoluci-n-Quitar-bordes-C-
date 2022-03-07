@@ -1,0 +1,14 @@
+HILOS
+gcc sinbordeshilos.c pgmOriginal.c -o  sinbordeshilos -lpthread
+Ejecucion: ./sinbordeshilos 5
+
+MPI:
+mpicc sinbordesmpi.c pgmOriginal.c -o sinbordes
+mpirun -np 3 sinbordes
+
+MPI + HILOS:
+mpicc sinbordesmpihilos.c pgmOriginal.c -o sinbordesmpihilos -lpthread
+mpirun -np 3 sinbordes 5
+
+
+
